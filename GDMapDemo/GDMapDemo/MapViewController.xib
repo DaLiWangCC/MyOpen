@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
+            <connections>
+                <outlet property="mapBackView" destination="PDh-NP-LEK" id="bra-2y-ppL"/>
+                <outlet property="searchDisplayController" destination="ttL-4f-cHi" id="Xov-oU-cO8"/>
+                <outlet property="view" destination="TDu-kP-o36" id="W6s-EX-Zpr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="TDu-kP-o36">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wko-Qz-VEf">
+                    <rect key="frame" x="14" y="99" width="30" height="30"/>
+                    <state key="normal" title="卫星"/>
+                    <connections>
+                        <action selector="SatelliteMapAction:" destination="-1" eventType="touchUpInside" id="onZ-lv-HnR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZP-oq-r9U">
+                    <rect key="frame" x="14" y="69" width="30" height="30"/>
+                    <state key="normal" title="普通"/>
+                    <connections>
+                        <action selector="standardMapAction:" destination="-1" eventType="touchUpInside" id="PB6-hc-rCa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glu-kD-o1n">
+                    <rect key="frame" x="14" y="130" width="30" height="30"/>
+                    <state key="normal" title="夜间"/>
+                    <connections>
+                        <action selector="nightMapAction:" destination="-1" eventType="touchUpInside" id="Pbt-gy-eQY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeT-BC-FjZ">
+                    <rect key="frame" x="14" y="168" width="60" height="30"/>
+                    <state key="normal" title="实时交通"/>
+                    <connections>
+                        <action selector="currentTrafficAction:" destination="-1" eventType="touchUpInside" id="WxT-oe-13E"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-Rg-WXo">
+                    <rect key="frame" x="23" y="503" width="105" height="30"/>
+                    <state key="normal" title="地图回到用户点"/>
+                    <connections>
+                        <action selector="backToCurrent:" destination="-1" eventType="touchUpInside" id="5kZ-Jy-eva"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPa-GB-gpn">
+                    <rect key="frame" x="153" y="498" width="67" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="路线"/>
+                    <connections>
+                        <action selector="findWayAction:" destination="-1" eventType="touchUpInside" id="Fc3-JF-eHE"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-NP-LEK">
+                    <rect key="frame" x="0.0" y="541" width="600" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWG-aL-ZpG">
+                    <rect key="frame" x="14" y="217" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="jumpTosearchAction:" destination="-1" eventType="touchUpInside" id="TED-R3-Lgx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="glu-kD-o1n" firstAttribute="leading" secondItem="wko-Qz-VEf" secondAttribute="leading" id="1Lv-wP-hlD"/>
+                <constraint firstItem="MeT-BC-FjZ" firstAttribute="leading" secondItem="glu-kD-o1n" secondAttribute="leading" id="29Y-6r-bSP"/>
+                <constraint firstItem="KWG-aL-ZpG" firstAttribute="leading" secondItem="MeT-BC-FjZ" secondAttribute="leading" id="3V4-lE-htQ"/>
+                <constraint firstItem="OA8-Rg-WXo" firstAttribute="centerY" secondItem="MeT-BC-FjZ" secondAttribute="centerY" id="3mX-2g-71J"/>
+                <constraint firstItem="wko-Qz-VEf" firstAttribute="top" secondItem="CZP-oq-r9U" secondAttribute="bottom" id="4We-hR-iDW"/>
+                <constraint firstItem="PDh-NP-LEK" firstAttribute="leading" secondItem="TDu-kP-o36" secondAttribute="leading" id="9LC-mC-Cj7"/>
+                <constraint firstItem="CZP-oq-r9U" firstAttribute="leading" secondItem="TDu-kP-o36" secondAttribute="leading" constant="14" id="BlO-4U-U0K"/>
+                <constraint firstItem="glu-kD-o1n" firstAttribute="top" secondItem="wko-Qz-VEf" secondAttribute="bottom" constant="1" id="CBZ-hD-Xt6"/>
+                <constraint firstItem="OA8-Rg-WXo" firstAttribute="leading" secondItem="TDu-kP-o36" secondAttribute="leading" constant="23" id="DsB-X7-LQj"/>
+                <constraint firstItem="PDh-NP-LEK" firstAttribute="top" secondItem="TDu-kP-o36" secondAttribute="top" constant="541" id="EaA-aw-AQD"/>
+                <constraint firstItem="vPa-GB-gpn" firstAttribute="centerY" secondItem="OA8-Rg-WXo" secondAttribute="centerY" id="Ej4-CB-6H9"/>
+                <constraint firstItem="vPa-GB-gpn" firstAttribute="leading" secondItem="OA8-Rg-WXo" secondAttribute="trailing" constant="25" id="FrR-cC-I4i"/>
+                <constraint firstAttribute="bottom" secondItem="wko-Qz-VEf" secondAttribute="bottom" constant="100" id="G4R-u1-jHD"/>
+                <constraint firstItem="MeT-BC-FjZ" firstAttribute="top" secondItem="glu-kD-o1n" secondAttribute="bottom" constant="8" id="IZs-63-iEL"/>
+                <constraint firstItem="MeT-BC-FjZ" firstAttribute="top" secondItem="glu-kD-o1n" secondAttribute="bottom" constant="8" id="N1G-pw-efY"/>
+                <constraint firstAttribute="bottom" secondItem="PDh-NP-LEK" secondAttribute="bottom" id="RD6-ho-57I"/>
+                <constraint firstAttribute="bottom" secondItem="OA8-Rg-WXo" secondAttribute="bottom" constant="67" id="RL8-gf-b9W"/>
+                <constraint firstItem="CZP-oq-r9U" firstAttribute="top" secondItem="TDu-kP-o36" secondAttribute="top" constant="69" id="Uib-xH-oRu"/>
+                <constraint firstAttribute="bottom" secondItem="CZP-oq-r9U" secondAttribute="bottom" constant="100" id="W5a-Oe-1Wn"/>
+                <constraint firstItem="OA8-Rg-WXo" firstAttribute="leading" secondItem="MeT-BC-FjZ" secondAttribute="trailing" constant="26" id="WF9-O4-x6K"/>
+                <constraint firstAttribute="trailing" secondItem="PDh-NP-LEK" secondAttribute="trailing" id="fG8-ip-9gd"/>
+                <constraint firstItem="glu-kD-o1n" firstAttribute="leading" secondItem="wko-Qz-VEf" secondAttribute="trailing" constant="-30" id="hg9-Jw-IZX"/>
+                <constraint firstItem="MeT-BC-FjZ" firstAttribute="leading" secondItem="glu-kD-o1n" secondAttribute="leading" id="kSG-Ka-jMa"/>
+                <constraint firstAttribute="bottom" secondItem="glu-kD-o1n" secondAttribute="bottom" constant="440" id="kuz-Xv-BzW"/>
+                <constraint firstItem="KWG-aL-ZpG" firstAttribute="top" secondItem="MeT-BC-FjZ" secondAttribute="bottom" constant="19" id="q4G-2f-zJ6"/>
+                <constraint firstItem="wko-Qz-VEf" firstAttribute="leading" secondItem="CZP-oq-r9U" secondAttribute="trailing" constant="8" id="ryF-xS-DSh"/>
+                <constraint firstItem="wko-Qz-VEf" firstAttribute="leading" secondItem="CZP-oq-r9U" secondAttribute="leading" id="zdg-RB-qYB"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="W5a-Oe-1Wn"/>
+                    <exclude reference="G4R-u1-jHD"/>
+                    <exclude reference="ryF-xS-DSh"/>
+                    <exclude reference="hg9-Jw-IZX"/>
+                    <exclude reference="kuz-Xv-BzW"/>
+                    <exclude reference="IZs-63-iEL"/>
+                    <exclude reference="kSG-Ka-jMa"/>
+                    <exclude reference="3mX-2g-71J"/>
+                    <exclude reference="WF9-O4-x6K"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="160" y="211"/>
+        </view>
+        <searchDisplayController id="aiS-Pr-Osr">
+            <connections>
+                <outlet property="delegate" destination="-1" id="Cb3-Rt-tMx"/>
+                <outlet property="searchContentsController" destination="-1" id="q98-7H-a6P"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="ofh-YC-y25"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="d1v-yh-NGM"/>
+            </connections>
+        </searchDisplayController>
+        <searchDisplayController id="ttL-4f-cHi">
+            <connections>
+                <outlet property="delegate" destination="-1" id="afz-m2-Ive"/>
+                <outlet property="searchContentsController" destination="-1" id="zk6-1m-m9o"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="aNt-rp-poU"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="v9C-Ws-zSg"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>
