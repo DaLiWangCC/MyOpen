@@ -46,18 +46,7 @@
     return _dataList;
 }
 
-//- (UISearchController *)searchController
-//{
-//    if (!_searchController) {
-//         _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-//        _searchController.searchResultsUpdater = self;
-//        _searchController.searchBar.delegate = self;
-//        _searchController.dimsBackgroundDuringPresentation = NO;
-//        _searchController.hidesNavigationBarDuringPresentation = NO;
-//        _searchController.searchBar.frame = CGRectMake(kWidth/2 - 100, 20, 200, 44.0);
-//    }
-//    return _searchController;
-//}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
