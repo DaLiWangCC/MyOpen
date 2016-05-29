@@ -14,6 +14,7 @@
 
 @interface ViewController ()
 
+//类
 @property (nonatomic,retain) Person *per;
 
 @end
