@@ -14,7 +14,7 @@
 
 @interface ViewController ()
 
-//类
+//类testBranch
 @property (nonatomic,retain) Person *per;
 
 @end
